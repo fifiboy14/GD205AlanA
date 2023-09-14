@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BasicMovement : MonoBehaviour
 {
-    float num;
 
     // Start is called before the first frame update
     void Start()
@@ -15,10 +14,40 @@ public class BasicMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W))
+        if(Input.GetKeyDown("w"))
         {
-            Debug.Log("W Key Pressed");
+            Debug.Log("w Key Pressed");
             transform.position += Vector3.forward;
+        }
+        
+        if(Input.GetKeyDown("s"))
+        {
+            Debug.Log("s Key Pressed");
+            transform.position += Vector3.back;
+        }
+
+        if(Input.GetKeyDown("a"))
+        {
+            Debug.Log("a Key Pressed");
+            transform.position += Vector3.left;
+        }
+        
+        if(Input.GetKeyDown("d"))
+        {
+            Debug.Log("d Key Pressed");
+            transform.position += Vector3.right;
+        }
+
+        if(Input.GetKeyDown("q"))
+        {
+            Debug.Log("q Key Pressed");
+            transform.position += Vector3.down;
+        }
+        
+        if(Input.GetKeyDown("e"))
+        {
+            Debug.Log("e Key Pressed");
+            transform.position += Vector3.up;
         }
     }
 }
