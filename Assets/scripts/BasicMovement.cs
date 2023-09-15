@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BasicMovement : MonoBehaviour
 {
+    public GameObject hazard;
+    public GameObject[] hazards;
 
     // Start is called before the first frame update
     void Start()
@@ -49,5 +51,17 @@ public class BasicMovement : MonoBehaviour
             Debug.Log("e Key Pressed");
             transform.position += Vector3.up;
         }
+/*        if(transform.position == hazard.transform.position){
+            Debug.Log("you are hazards): lul");
+
+        }
+*/        
+        for (int i = 0; i < hazards.Length; i++){
+            if(transform.position == hazards[i].transform.position){
+            Debug.Log("you are hazards): lul");
+            Destroy(gameObject);
+
+        }
     }
+}
 }
