@@ -6,16 +6,19 @@ public class BasicMovement : MonoBehaviour
 {
     public GameObject hazard;
     public GameObject[] hazards;
+    Vector3 startPos;
+    public AudioClip death;
+    AudioSource player;
 
-    // Start is called before the first frame update
     void Start()
     {
-        
+        startPos = transform.position;
+        player = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
     void Update()
     {
+        
         if(Input.GetKeyDown("w"))
         {
             Debug.Log("w Key Pressed");
@@ -59,7 +62,9 @@ public class BasicMovement : MonoBehaviour
         for (int i = 0; i < hazards.Length; i++){
             if(transform.position == hazards[i].transform.position){
             Debug.Log("you are hazards): lul");
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            transform.position = startPos;
+            player.PlayOneShot(death, .75f);
 
         }
     }
