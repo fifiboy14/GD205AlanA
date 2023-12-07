@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
-  productGUID: 12aecb8a4251d4b93bb8d7fb2e658b2d
+  productGUID: fc10e8beb4f0d274da83238bbb016836
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: C# scripting
+  productName: final 205
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -672,14 +672,14 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: C# scripting
+  metroPackageName: final 205
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: C# scripting
+  metroApplicationDescription: final 205
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -748,10 +748,10 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 4ff9c9c0-13dd-4f8d-84f7-b12982c4d541
+  cloudProjectId: 62ba323f-6981-40d7-a2a5-d6ad7099ef7f
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: C# scripting
+  projectName: final 205
   organizationId: alanfifi1973
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
