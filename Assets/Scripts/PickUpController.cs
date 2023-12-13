@@ -17,6 +17,8 @@ public class PickUpController : MonoBehaviour
 
     private void Start()
     {
+        gunScript = GetComponent<Projectiles>();
+        rb = GetComponent<Rigidbody>();
 
         if (!equipped)
         {
@@ -35,6 +37,12 @@ public class PickUpController : MonoBehaviour
 
     private void Update()
     {
+        if (equipped)
+        {
+            transform.localPosition = Vector3.zero;
+            transform.localRotation = Quaternion.Euler(Vector3.zero);
+            transform.localScale = Vector3.one;
+        }
 
         Vector3 distanceToPlayer = player.position - transform.position;
         if (!equipped && distanceToPlayer.magnitude <= pickUpRange && Input.GetKeyDown(KeyCode.E) && !slotFull) PickUp();
@@ -45,25 +53,26 @@ public class PickUpController : MonoBehaviour
 
     private void PickUp()
     {
+        rb.Sleep();
+
         equipped = true;
         slotFull = true;
-
 
         transform.SetParent(gunContainer);
         transform.localPosition = Vector3.zero;
         transform.localRotation = Quaternion.Euler(Vector3.zero);
         transform.localScale = Vector3.one;
 
-
         rb.isKinematic = true;
         coll.isTrigger = true;
 
-
         gunScript.enabled = true;
+
     }
 
     private void Drop()
     {
+
         equipped = false;
         slotFull = false;
 
@@ -85,5 +94,7 @@ public class PickUpController : MonoBehaviour
 
 
         gunScript.enabled = false;
+
+        rb.WakeUp();
     }
 }
