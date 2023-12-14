@@ -27,6 +27,8 @@ public class Projectiles : MonoBehaviour
 
     public bool allowInvoke = true;
 
+    public float damage = 20f;
+
     private void Awake()
     {
         bulletsLeft = magazineSize;
@@ -101,6 +103,13 @@ public class Projectiles : MonoBehaviour
 
         if (bulletsShot < bulletsPerTap && bulletsLeft > 0)
             Invoke("Shoot", timeBetweenShots);
+
+            EnemyHealth Enemy = transform.GetComponent<EnemyHealth>();
+
+            if (Enemy != null)
+            {
+                Enemy.TakeDamage(damage);
+            }
     }
     private void ResetShot()
     {
