@@ -6,8 +6,6 @@ public class CustomProjectiles : MonoBehaviour
     public GameObject explosion;
     public LayerMask whatIsEnemies;
 
-    public float damage = 20f;
-
  
     [Range(0f,1f)]
     public float bounciness;
